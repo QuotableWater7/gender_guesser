@@ -1,5 +1,3 @@
 == README
 
 This app guesses your gender based on your height and weight.   I apologize for any bad guesses!
-
-Use rake db:populate to fill in some initial data
