@@ -1,0 +1,12 @@
+<h1>Prediction</h1>
+<p>You are a <%= @prediction %>!  Is this correct?</p>
+
+<%= form_for :person, :url => '/people' do |f| %>
+	<%= f.radio_button(:gender, @prediction == 'male' ? "m" : "f") %>
+	<%= label(:gender, "Yes") %>
+	<%= f.radio_button(:gender, @prediction == 'female' ? "m" : "f") %>
+	<%= label(:gender, "No") %>
+	<%= f.hidden_field :weight, {:value => params[:weight]} %>
+	<%= f.hidden_field :height, {:value => params[:height]} %>
+	<%= submit_tag("Submit") %>
+<% end %>

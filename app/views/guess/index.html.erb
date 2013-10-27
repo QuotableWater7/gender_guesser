@@ -1,0 +1,12 @@
+<h1>Gender Guesser</h1>
+<p>Enter your height and weight and we'll guess your gender.  Warning: results may offend :)</p>
+
+<%= form_tag({controller: "guess", action: "prediction"}, method: "get") do %>
+	<%= label_tag(:weight, "Weight:") %>
+	<%= text_field_tag(:weight) %>
+	<%= label_tag(:height, "Height:") %>
+	<%= text_field_tag(:height) %>
+	<%= submit_tag("Guess!") %>
+<% end %>
+
+<%= notice %>
